@@ -7,6 +7,6 @@ apply: [ ../common.module-template.yaml ]
 dependencies:
   - com.soywiz:korlibs-math-core:6.0.0
   - com.soywiz:korlibs-math-vector:6.0.0: exported
-  - com.soywiz:korlibs-ffi:6.0.0
+  - com.soywiz:korlibs-ffi-legacy:6.0.0
   - com.soywiz:korlibs-platform:6.0.0
   - com.soywiz:korlibs-io-fs:6.0.0
