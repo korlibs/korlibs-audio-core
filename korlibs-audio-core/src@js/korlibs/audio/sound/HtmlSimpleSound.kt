@@ -363,7 +363,10 @@ object HtmlSimpleSound {
 
 	suspend fun loadSound(data: ByteArray): AudioBuffer? = loadSound(data.unsafeCast<Int8Array>().buffer, "ByteArray")
 
-	suspend fun loadSound(url: String): AudioBuffer? =
-        loadSound(window.fetch(url).await().arrayBuffer().await().asByteArray())
+	suspend fun loadSound(url: String): AudioBuffer? {
+        val response = window.asDynamic().fetch(url).unsafeCast<kotlin.js.Promise<*>>().await()
+        val arrayBuffer = response.asDynamic().arrayBuffer().unsafeCast<kotlin.js.Promise<ArrayBuffer>>().await()
+        return loadSound(data = arrayBuffer.asByteArray())
+    }
 
 }

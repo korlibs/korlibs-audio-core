@@ -241,7 +241,7 @@ public final class korlibs/audio/sound/NativeSoundProviderJvmKt {
 
 public abstract interface class korlibs/audio/sound/ReadonlySoundProps {
 	public abstract fun getPanning ()D
-	public abstract fun getPitch ()D
+	public fun getPitch ()D
 	public abstract fun getPosition ()Lkorlibs/math/geom/Vector3F;
 	public abstract fun getVolume ()D
 }
@@ -251,10 +251,10 @@ public final class korlibs/audio/sound/ReadonlySoundProps$DefaultImpls {
 }
 
 public abstract interface class korlibs/audio/sound/SoundListenerProps {
-	public abstract fun getListenerOrientationAt ()Lkorlibs/math/geom/Vector3F;
-	public abstract fun getListenerOrientationUp ()Lkorlibs/math/geom/Vector3F;
-	public abstract fun getListenerPosition ()Lkorlibs/math/geom/Vector3F;
-	public abstract fun getListenerSpeed ()Lkorlibs/math/geom/Vector3F;
+	public fun getListenerOrientationAt ()Lkorlibs/math/geom/Vector3F;
+	public fun getListenerOrientationUp ()Lkorlibs/math/geom/Vector3F;
+	public fun getListenerPosition ()Lkorlibs/math/geom/Vector3F;
+	public fun getListenerSpeed ()Lkorlibs/math/geom/Vector3F;
 }
 
 public final class korlibs/audio/sound/SoundListenerProps$DefaultImpls {
@@ -266,11 +266,11 @@ public final class korlibs/audio/sound/SoundListenerProps$DefaultImpls {
 
 public abstract interface class korlibs/audio/sound/SoundProps : korlibs/audio/sound/ReadonlySoundProps, korlibs/datastructure/Extra {
 	public abstract fun getPanning ()D
-	public abstract fun getPitch ()D
+	public fun getPitch ()D
 	public abstract fun getPosition ()Lkorlibs/math/geom/Vector3F;
 	public abstract fun getVolume ()D
 	public abstract fun setPanning (D)V
-	public abstract fun setPitch (D)V
+	public fun setPitch (D)V
 	public abstract fun setPosition (Lkorlibs/math/geom/Vector3F;)V
 	public abstract fun setVolume (D)V
 }
